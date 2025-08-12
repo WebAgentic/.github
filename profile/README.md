@@ -6,10 +6,10 @@
 
 이 프로젝트는 4개의 분리된 저장소로 구성된 마이크로서비스 아키텍처를 사용합니다 
 
-1. **웹페이지 Server** - GitHub Pages를 통한 정적 웹사이트
-2. **Proxy Server** - FastAPI 기반 중간 서버
-3. **Host Agent Server** - 에이전트 호스팅 서버 (A2A Protocol)
-4. **MCP Server** - Model Context Protocol 서버 (Server & Local)
+1. **웹페이지 Server** - GitHub Pages를 통한 정적 웹사이트 (Public)
+2. **Proxy Server** - FastAPI 기반 중간 서버 (Private)
+3. **Host Agent Server** - 에이전트 호스팅 서버 (A2A Protocol) (Public)
+4. **MCP Server** - Model Context Protocol 서버 (Server & Local) (Public)
 
 ```mermaid
 graph TD
