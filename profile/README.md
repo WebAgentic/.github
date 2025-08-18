@@ -5,16 +5,18 @@
 
 이 프로젝트는 4개의 분리된 저장소로 구성된 마이크로서비스 아키텍처를 사용합니다 
 1. **웹페이지 Server** - GitHub Pages를 통한 정적 [웹사이트](https://kimdonghwi94.github.io/dhkim/) (Public) 
-2. **Proxy Server** - FastAPI 기반 중간 서버 (Private)
-3. **Host Agent Server** - 에이전트 호스팅 서버 (A2A Protocol) (Public) - 예정
-4. **MCP Server** - Model Context Protocol 서버 (Server & Local) (Public) - 예정
+2. **Proxy Server** - FastAPI 기반 중간 서버 (Private) vercel 배포 - upstash redis 큐 관리
+3. **Host Agent Server** - 에이전트 호스팅 서버 Supervisor 패턴 (Private) - 예정
+4. **Sub Agent Server** - 하위 에이전트 서버 (A2A 프로토콜) (Public) - 예정
+5. **MCP Server** - Model Context Protocol 서버 (Server & Local) (Public) - 예정
 
 ```mermaid
 graph TD
     A[웹브라우저] --> B[GitHub Pages<br/>포트폴리오 웹사이트]
     B --> C[Proxy Server<br/>FastAPI]
     C --> D[Host Agent Server]
-    D --> E[MCP Server]
+    D --> E[Sub Agent Server - A2A]
+    E --> I[MCP Server]
     
     B -.-> F[세션 관리]
     C -.-> G[보안 검증]
