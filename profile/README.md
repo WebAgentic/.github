@@ -8,8 +8,12 @@
 2. **Proxy Server** - FastAPI 기반 중간 서버 (Private) vercel 배포 - upstash redis 큐 관리
 3. **Host Agent Server** - 에이전트 호스팅 서버 Supervisor 패턴 (Private) - Mem0 (milvus, redis)
 4. **Sub Agent Server** - 하위 에이전트 서버 (A2A 프로토콜) (Public) - 예정
+4.1. Web 분석 및 페이지 생성 에이전트 (web 분석 + web 생성)
+4.2. 사용자 질의 응답 에이전트 (RAG + web search)
 5. **MCP Server** - Model Context Protocol 서버 (Server & Local) (Public) - 예정
-
+5-1. Web 페이지 분석 MCP
+5-2. Web 페이지 생성 MCP
+5-3. Web search MCP
 ```mermaid
 graph TD
     A[웹브라우저] --> B[GitHub Pages<br/>포트폴리오 웹사이트]
